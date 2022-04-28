@@ -1,0 +1,139 @@
+nav {
+    position: fixed;
+    top: 2em;
+    right: 3em;
+    z-index: 60;
+    ul {
+        flex-direction: row;
+        display: flex;
+        gap: 1em;
+
+        li {
+            cursor: pointer;
+            font-weight: 600;
+            background-image: linear-gradient(132deg, #000000 0%, #000000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: background 1s ease-out;
+            transform: translateY(-100px);
+            animation: toPage 0.7s forwards;
+
+            &:hover {
+                background-image: linear-gradient(132deg, #e29e73 0%, #d10543 100%);
+                // -webkit-background-clip: text;
+                // -webkit-text-fill-color: transparent;
+            }
+        }
+        @for $i from 2 through 5 {
+            li:nth-child(#{$i}n) {
+                animation-delay: #{$i * 0.2}s;
+            }
+        }
+
+    }
+
+    img {
+        width: 20px;
+        transition: 0.1s;
+        &:hover {
+            filter: invert(0.3) hue-rotate(100deg) contrast(97%) sepia(27%) saturate(30%);
+        }
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .nav-socials {
+        display: none;
+        img {
+            width: 24px;
+        }
+    }
+    .email {
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    nav li {
+        display: none;
+    }
+    nav .burger {
+        display: flex;
+        justify-content: right;
+    }
+
+    nav.responsive {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 200px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: translateX(300px);
+        animation: navSlider .5s forwards;
+    }
+
+    nav.responsive > ul {
+        padding: 3em;
+        flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        gap: 1em;
+    }
+
+    nav.responsive li:not(:first-child):not(:last-child) {
+        display: flex;
+        font-size: large;
+        position: relative;
+        animation: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2px;
+            bottom: -.6em;
+            background-color: #202020;
+            transform: scaleX(0.3);
+            transition: 0.3s;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+
+        }
+    }
+    nav.responsive .burger {
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        top: 30px;
+        right: 80px;
+    }
+
+    nav.responsive .nav-socials {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5em;
+        position: absolute;
+        left: 40px;
+        bottom: 30px;
+    }
+}
+
+@keyframes navSlider {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes toPage {
+    to {
+        transform: translateY(0);
+    }
+}

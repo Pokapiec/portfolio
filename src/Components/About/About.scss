@@ -1,0 +1,40 @@
+section {
+    transition: all 0.6s;
+    position: relative;
+    div > p {
+        line-height: 1.4em;
+    }
+    .about-section-passive {
+        opacity: 0;
+        transform: translateY(5em);
+    }
+    
+    .about-section-active {
+        opacity: 0;
+        transform: translateY(5em);
+        animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    .flex {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: .8em;
+    }
+
+    img {
+        position: absolute;
+        opacity: 0.05;
+        width: 800px;
+        height: 600px;
+        top: 200px;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 760px) {
+    .about {
+        padding: 3em .6em;
+    }
+}

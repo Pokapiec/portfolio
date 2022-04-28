@@ -1,0 +1,65 @@
+$procents: (40: 40%,50: 50%,60: 60%,70: 70%,80: 80%,90: 90%,100: 100%);
+
+.horizontal-flex {
+    width: 100%;
+    // min-width: 380px;
+    max-width: 570px;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    
+
+    li {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1em;
+        align-items: center;
+        justify-content: center;
+
+        .progress-bar {
+            margin-top: 3px;
+            width: 100%;
+            // min-width: 350px;
+            max-width: 570px;
+            background-color: rgb(236, 236, 236);
+            height: 6px;
+            position: relative;
+            &::after {
+                content: '';
+                // background-color: #d10543;
+                background-color: #f3e4db;
+                background-image: linear-gradient(132deg, #e29e73 0%, #d10543 100%);
+                position: absolute;
+                height: 100%;
+                width: 0;
+
+            }
+        }
+
+        @each $k, $i in $procents {
+            .progress-bar-#{$k} {
+                @extend .progress-bar;
+                &::after {
+                    content: '';
+                    width: 0;
+                    animation: grow-#{$k} 1s ease-in-out forwards;
+                }
+            }
+
+            @keyframes grow-#{$k} {
+                to {
+                    width: #{$i};
+                }
+            }
+        
+        }
+    }
+}

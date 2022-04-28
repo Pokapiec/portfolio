@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inconsolata:wght@300&family=Nanum+Gothic&family=Quicksand&family=Raleway:wght@300&family=Work+Sans:wght@300;400&display=swap');
+
+html {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+* {
+    font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #363636;
+}
+
+h2 {
+    padding-bottom: 1em;
+}
+
+.container {
+    position: relative;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.canter-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    scroll-snap-align: start;
+    padding: 0 5em;
+    overflow: hidden;
+    justify-content: center;
+    padding: 3em 3em;
+
+}
+
+
+header, section, main, footer {
+    @extend .canter-all;
+}
+
+header, section, main {
+    height: auto;
+    min-height: 100vh;
+}
+
+
+footer {
+    height: 360px;
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    width: 90%;
+    margin: 0 auto;
+}
+
+// .loader {
+//     position: fixed;
+//     width: 100vw;
+//     height: 100vh;
+//     z-index: 50;
+//     background-color: rgb(255, 255, 255);
+//     // animation: loadPage 1s forwards;
+// }
+
+// @keyframes loadPage {
+//     to {
+//         height: 0;
+//     }
+// }
+
+
+
+
+
+
+// ::-webkit-scrollbar {
+//     width: 12px;
+// }
+ 
+// ::-webkit-scrollbar-track {
+//     background-color: #e4e4e4;
+//     border-radius: 100px;
+// }
+ 
+// ::-webkit-scrollbar-thumb {
+//     background-color: #a0a0a0;
+//     border-radius: 100px;
+//     transition: 0.2s;
+// }
+
+
+// ::-webkit-scrollbar-thumb:hover {
+//     background-color: #969696;
+// }

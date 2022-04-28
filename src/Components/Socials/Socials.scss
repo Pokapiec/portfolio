@@ -1,0 +1,60 @@
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 20px;
+    bottom: 30px;
+    padding: 10px 0;
+    transition: all 0.3s;
+    transform: translateX(-7em);
+    animation: appear 1s forwards;
+    z-index: 20;
+
+    div {
+        margin: .3em 0;
+    }
+    .linkedin, .github, .email {
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+            filter: invert(0.3) hue-rotate(100deg) contrast(97%) sepia(27%) saturate(30%);
+        }
+    }
+
+    .vertical-line {
+        background-color: #363636;
+        height: 60px;
+        width: 2px;
+    }
+}
+
+@keyframes appear {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 740px) {
+    .socials {
+        display: none;
+        // flex-direction: row-reverse;
+        // bottom: 93vh;
+        // left: 6px;
+        // background-color: white;
+        // padding: 4px 0 0 0;
+        // margin: 0;
+        // border-radius: 10px;
+        // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        // div {
+        //     margin: 0 .3em;
+        // }
+        // .vertical-line {
+        //     background-color: #363636;
+        //     height: 0px;
+        //     width: 0px;
+        // }
+    }
+}
