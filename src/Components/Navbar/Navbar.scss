@@ -56,9 +56,11 @@ nav {
 }
 
 @media screen and (max-width: 1500px) {
-    nav li {
+    nav > ul > li {
         display: none;
     }
+
+
     nav .burger {
         display: flex;
         justify-content: right;
