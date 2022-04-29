@@ -38,6 +38,11 @@ h2 {
 
 }
 
+@media (max-width: 740px) {
+    .canter-all {
+        padding: 2em 3em;
+    }
+}
 
 header, section, main, footer {
     @extend .canter-all;

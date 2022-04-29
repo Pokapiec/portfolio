@@ -1,5 +1,6 @@
 header {
     justify-content: center;
+    position: relative;
     h1 {
         margin-bottom: 1em;
     }
@@ -10,9 +11,12 @@ header {
     h5 {
         margin-bottom: 1em;
     }
+    .burger {
+        display: none;
+    }
+
+    
 }
-
-
 
 
 .blob {
@@ -59,7 +63,7 @@ header {
 }
 
 .name {
-    animation-timing-function: steps(70, end);
+    animation-timing-function: steps(50, end);
     animation-delay: 0.6s;
 }
 .role-intro {
@@ -88,5 +92,23 @@ header {
 @keyframes rotateIn {
     to {
         transform: scale(1) rotate(0);
+    }
+}
+
+
+@media (max-width: 1500px) {
+    header .burger {
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 40px;
+        cursor: pointer;
+        transition: 0.1s;
+        &:hover {
+            filter: invert(0.3);
+        }
+        img {
+            width: 22px;
+        }
     }
 }

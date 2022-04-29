@@ -52,7 +52,7 @@ export default function Navbar() {
     }
 
     return (
-        <nav>
+        <nav >
             <ul>
                 <li onClick={toggleNav} className='burger'><img src={BurgerIcon} alt="-" /></li>
                 <li onClick={scrollToAbout}>About</li>
