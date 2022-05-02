@@ -1,25 +1,31 @@
-const fs = require('fs');
+const fs = require('fs').promises
 
-const log = (msg) => console.log(msg)
+const log = (msg) => console.log('\x1b[35m%s\x1b[0m', msg)
 
 const target_dir = './build/assets'
-const htmlFile = './build/index.html'
 
-fs.readdir(target_dir, (err, files) => {
-    files.forEach(file => {
-        if (file.endsWith('.js')) {
-            fs.readFile(target_dir + '/' + file, 'utf8' , (err, data) => {
-                const newData = data.replaceAll('/assets', 'assets')
-                fs.writeFileSync(target_dir + '/' + file, newData)
-            })
-        }
-    });
-  });
+const findJsFilePath = async () => {
+    const files = await fs.readdir(target_dir);
+    const jsFiles = files.filter((elem) => ( elem.endsWith('.js') ))
+    const filesWithPaths = jsFiles.map((elem) => (`${target_dir}/${elem}`))
+    return filesWithPaths
+}
 
-fs.readFile(htmlFile, 'utf8' , (err, data) => {
-    const newData = data.replaceAll('/assets', 'assets')
-    // log(newData)
-    fs.writeFileSync(htmlFile, newData)
-})
+const replaceBadPaths = async (files) => {
+    for (const file of files) {
+        const data = await fs.readFile(file, 'utf8')
+        const newData = data.replaceAll('/assets', 'assets')
+        await fs.writeFile(file, newData)
+    }
+}
 
-log('Replaced all shitty paths!')
+const main = async () => {
+    let fileToReplace = ['./build/index.html']
+    const jsFilePaths = await findJsFilePath();
+    fileToReplace = [...fileToReplace, ...jsFilePaths]
+    await replaceBadPaths(fileToReplace)
+    log('Replaced all bad shit paths!')
+}
+
+main()
+

@@ -7,6 +7,7 @@ import Contact from './Components/Contact/Contact';
 import Socials from './Components/Socials/Socials';
 import Projects from './Components/Projects/Projects';
 
+
 function App() {
   return (
     <div className='container'>
