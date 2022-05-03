@@ -6,6 +6,8 @@ import Tech from './Components/Tech/Tech';
 import Contact from './Components/Contact/Contact';
 import Socials from './Components/Socials/Socials';
 import Projects from './Components/Projects/Projects';
+import Services from './Components/Services/Services';
+
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
       <Header/>
       <About/>
       <Tech/>
+      <Services />
       <Projects/>
       <Contact/>
       <Socials/>

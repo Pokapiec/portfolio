@@ -12,6 +12,7 @@ export default function Navbar() {
     const [skills, setSkills] = useState(null);
     const [projects, setProjects] = useState(null);
     const [contact, setContact] = useState(null);
+    const [services, setServices] = useState(null);
     const [nav, setNav] = useState(null);
 
 
@@ -21,6 +22,8 @@ export default function Navbar() {
         const skillsElem = document.querySelector('.tech')
         const projectsElem = document.querySelector('main')
         const contactElem = document.getElementById('contact')
+        const servicesElem = document.querySelector('.services')
+
         const navElem = document.querySelector('nav')
         console.log()
 
@@ -29,6 +32,7 @@ export default function Navbar() {
         setProjects(projectsElem)
         setContact(contactElem)
         setNav(navElem)
+        setServices(servicesElem)
     }, [])
 
 
@@ -51,12 +55,18 @@ export default function Navbar() {
         toggleNav()
     }
 
+    const scrollToServices = () => {
+        services.scrollIntoView({ behavior: "smooth" })
+        toggleNav()
+    }
+
     return (
         <nav >
             <ul>
                 <li onClick={toggleNav} className='burger'><img src={BurgerIcon} alt="-" /></li>
                 <li onClick={scrollToAbout}>About</li>
                 <li onClick={scrollToSkills}>Skills</li>
+                <li onClick={scrollToServices}>Services</li>
                 <li onClick={scrollToProjects}>Projects</li>
                 <li onClick={scrollToContact}>Contact</li>
                 <div className='nav-socials'>

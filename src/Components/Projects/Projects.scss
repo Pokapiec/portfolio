@@ -1,10 +1,13 @@
 main {
+    h2 {
+        margin-bottom: 1em;
+    }
     .projects-container {
         width: 100%;
-        max-width: 1200px;
+        max-width: 1500px;
         display: grid;
         gap: 1.6em;
-        grid-template-columns: repeat(auto-fit, 300px);
+        grid-template-columns: repeat(auto-fit, 400px);
         justify-content: center;
         transition: 0.2s;
         padding-bottom: 5em;
@@ -31,7 +34,7 @@ main {
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             transition: 0.2s;
             transition: transform 1s;
-            width: 300px;
+            width: 400px;
             height: 300px;
             position: relative;
             padding: 0;
@@ -118,6 +121,16 @@ main {
 @keyframes scaleIn {
     to {
         transform: scale(1);
+    }
+}
+
+@media (max-width: 940px) {
+    main .projects-container {
+        grid-template-columns: repeat(auto-fit, 300px);
+
+        .project {
+            width: 300px;
+        }
     }
 }
 

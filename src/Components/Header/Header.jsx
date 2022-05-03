@@ -17,13 +17,17 @@ export default function Header() {
     <header >
       <div onClick={toggleNav} className='burger'><img src={BurgerIcon} alt="-" /></div>
 
-      <h5 className='intro'>Hi! My name is</h5>
-      <h1 className='name'>Paweł Okapiec</h1>
-      <h5 className='role-intro'>And i'm a</h5>
-      <h4 className='role'>Web developer | Data engenieer</h4>
+      <div className='header-container'>
+        <div className='text-container'>
+          <h5 className='intro'>Hi! My name is</h5>
+          <h1 className='name'>Paweł Okapiec</h1>
+          <h5 className='role-intro'>And i'm a</h5>
+          <h4 className='role'>Web developer | Data engenieer</h4>
+        </div>
 
-      <div className='blob'>
-        <img src={cvPhoto} alt="Image" />
+        <div className='blob'>
+          <img src={cvPhoto} alt="Image" />
+        </div>
       </div>
     </header>
   )

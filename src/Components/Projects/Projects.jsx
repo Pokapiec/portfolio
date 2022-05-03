@@ -9,9 +9,9 @@ import KursBookImg from '../../images/kursbook-main.jpg';
 
 import GitIcon from '../../icons/github.svg';
 
-import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
-import 'react-awesome-slider/dist/styles.css';
+// import AwesomeSlider from 'react-awesome-slider';
+// import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
+// import 'react-awesome-slider/dist/styles.css';
 
 export default function Projects() {
     let options = {

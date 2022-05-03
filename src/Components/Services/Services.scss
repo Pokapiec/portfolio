@@ -1,0 +1,128 @@
+.services {
+
+    h2 {
+        margin-bottom: 1em;
+    }
+    width: 100%;
+
+    .services-grid {
+        width: 100%;
+        max-width: 1200px;
+
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, 300px);
+        gap: 2em;
+
+        .hidden {
+            opacity: 0;
+            transform-origin: left;
+            transform: scaleX(0.7);
+        }
+
+        .shown {
+            opacity: 0;
+            transform-origin: left;
+            transform: scaleX(0.7);
+            animation: scaleX 1s forwards;
+        }
+
+        @for $i from 1 through 5 {
+            .shown:nth-child(#{$i}n) {
+                animation-delay: #{$i * 0.1}s;
+            }
+        }
+
+
+        .grid-elem {
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 14px 0px;
+            transition: 0.3s;
+            border-radius: .6em;
+            width: 100%;
+            height: 300px;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+
+            .indicator {
+                position: absolute;
+                background-image: linear-gradient(132deg, #e29e73 0%, #d10543 100%);
+                width: 100%;
+                height: 7px;
+                top: 0;
+            }
+
+            .icon {
+
+                width: 100%;
+                img {
+                    width: 40px;
+                    margin-bottom: 2em;
+                    filter: invert(0.2);
+                }
+            }
+
+            h4 {
+                margin-bottom: 2em;
+                font-size: large;
+                position: relative;
+                width: 100%;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -20px;
+                    left: 30%;
+                    right: 30%;
+                    height: 2px;
+                    background-color: rgba(80, 80, 80, 0.9);
+                    transition: 0.3s;
+
+                }
+            }
+            p {
+                font-size: 14px;
+                color: rgb(105, 105, 105);
+            }
+
+            &:hover {
+                box-shadow: rgba(85, 38, 38, 0.2) 0px 7px 36px 0px;
+
+            }
+
+            &:hover h4::after {
+                transform: scaleX(1.3);
+            }
+
+            
+        }
+    }
+}
+
+
+
+@media (max-width: 740px) {
+    
+    .services .services-grid {
+        width: 90%;
+        grid-template-columns: 1fr;
+
+        .grid-elem {
+            width: 100%;
+        }
+    }
+}
+
+
+@keyframes scaleX {
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}

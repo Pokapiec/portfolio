@@ -1,6 +1,7 @@
-section {
+.about {
     transition: all 0.6s;
     position: relative;
+    max-width: 900px;
     div > p {
         line-height: 1.4em;
     }

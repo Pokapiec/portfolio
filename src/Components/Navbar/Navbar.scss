@@ -24,7 +24,7 @@ nav {
                 // -webkit-text-fill-color: transparent;
             }
         }
-        @for $i from 2 through 5 {
+        @for $i from 2 through 6 {
             li:nth-child(#{$i}n) {
                 animation-delay: #{$i * 0.2}s;
             }
