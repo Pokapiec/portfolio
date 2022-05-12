@@ -57,6 +57,7 @@ header {
     img {
         height: 100%;
         margin: auto;
+        filter: grayscale(0.2);
     }
 }
 
@@ -91,7 +92,7 @@ header {
 }
 .role {
     animation-timing-function: steps(30, end);
-    animation-delay: 3.2s;
+    animation-delay: 2.8s;
     animation-duration: 1s;
 
 }

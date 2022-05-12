@@ -13,7 +13,7 @@ export default function Tech() {
         HTML: 90,
         CSS: 70,
         React: 80,
-        MicrosoftAzure: 70,
+        "Microsoft Azure": 70,
         SQL: 80,
         Git: 90,
         C: 50
@@ -29,13 +29,10 @@ export default function Tech() {
                            .sort(function(a,b) {
                                return abilities[b]-abilities[a]
                             })
-    // setAbils(sortable)
-
-
     
     return (
         <section className='tech' ref={TechRef}>
-            <h2>Technologies</h2>
+            <h2>Skills</h2>
             <ul>
                 {sortable.map((k, v) => (
                     <li key={k}>

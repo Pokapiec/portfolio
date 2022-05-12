@@ -17,13 +17,13 @@
         .hidden {
             opacity: 0;
             transform-origin: left;
-            transform: scaleX(0.7);
+            transform: scaleX(0.8);
         }
 
         .shown {
             opacity: 0;
             transform-origin: left;
-            transform: scaleX(0.7);
+            transform: scaleX(0.8);
             animation: scaleX 1s forwards;
         }
 
@@ -41,7 +41,7 @@
             border-radius: .6em;
             width: 100%;
             height: 300px;
-            padding: 0;
+            padding: 1em;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -97,7 +97,7 @@
             }
 
             &:hover h4::after {
-                transform: scaleX(1.3);
+                transform: scaleX(1.2);
             }
 
             

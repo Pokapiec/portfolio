@@ -17,7 +17,9 @@ export default function About() {
     <section className='about' ref={AboutRef} >
       <img src={DevAnim} alt="" />
       <div className={`${AboutInView ? "about-section-active" : "about-section-passive"}`}>
-        <h2>About me</h2>
+        <div className='title-container'>
+          <h2>About me</h2>
+        </div>
         <p>I'm a developer mostly using Python programing language for backend and React.js as a frontend library. I'm open to learning new technologies even not connected to web developement. Nevertheless, nowadays i strongy focus on web and i want to learn how to develop best possible production ready web apps.</p>
         <br />
         <p>I graduated from the Warsaw University of Technology and now i'm pursuing a Masters degree in Computer Science at the same university.</p>
@@ -30,7 +32,7 @@ export default function About() {
             <b>Role: </b> Full stack developer | Data engenieer
           </div>
           <div>
-            <b>Degree: </b> Engenieer in Automatition and Robotics
+            <b>Degree: </b> Engenieer in Automation and Robotics
           </div>
  
           <div>

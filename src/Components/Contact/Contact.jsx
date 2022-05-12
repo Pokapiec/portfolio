@@ -1,15 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Contact.scss';
 import PhoneIcon from '../../icons/phone.svg';
 import MailIcon from '../../icons/mail.svg';
 import LinkedinIcon from '../../icons/linkedin.svg';
 import GitIcon from '../../icons/github.svg';
+import { useInView } from 'react-intersection-observer';
 
 
 export default function Contact() {
 
+  let options = {
+      threshold: 0.95,
+      triggerOnce: true
+  }
+  const [ContactRef, ContactInView] = useInView(options)
+
+  useEffect(() => {
+    if (!ContactInView) return
+    let containers = document.querySelectorAll('.container')
+    console.log('ZMIANA!')
+    console.log(containers.style)
+
+    containers.forEach((el) => {
+      console.log(el.style)
+      el.style.scrollSnapType = 'y proximity'
+      console.log(el.style)
+    })
+
+  }, [ContactInView])
+
   return (
-    <footer id="contact">
+    <footer id="contact" ref={ContactRef}>
       <h2>Contact me</h2>
       <div className='contacts-container'>
         <div className='contact-field'>
