@@ -9,7 +9,7 @@ header {
     }
 
     h5 {
-        font-size: 14px;
+        font-size: 17px;
         margin-bottom: 1em;
     }
     .burger {
@@ -53,12 +53,35 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     transform: scale(0) rotate(165deg);
-    animation: rotateIn 1s forwards;
+    animation: rotateIn 1s forwards, floatBlob 6s infinite alternate linear;
 
     img {
         height: 100%;
         margin: auto;
         filter: grayscale(0.2);
+    }
+}
+
+@keyframes floatBlob {
+    0% {
+        border-top-left-radius: 70% 10%;
+        border-top-right-radius: 50% 40%;
+        border-bottom-right-radius: 60% 20%;
+        border-bottom-left-radius: 30% 60%;
+    } 
+
+    50% {
+        border-top-left-radius: 60% 25%;
+        border-top-right-radius: 40% 30%;
+        border-bottom-right-radius: 70% 10%;
+        border-bottom-left-radius: 20% 70%;
+    }
+    
+    100% {
+        border-top-left-radius: 50% 40%;
+        border-top-right-radius: 70% 10%;
+        border-bottom-right-radius: 30% 60%;
+        border-bottom-left-radius: 60% 20%;
     }
 }
 

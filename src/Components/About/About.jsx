@@ -20,19 +20,19 @@ export default function About() {
         <div className='title-container'>
           <h2>About me</h2>
         </div>
-        <p>I'm a developer mostly using Python programing language for backend and React.js as a frontend library. I'm open to learning new technologies even not connected to web developement. Nevertheless, nowadays i strongy focus on web and i want to learn how to develop best possible production ready web apps.</p>
+        <p>I'm a developer mostly using Python programming language for backend with Django framework and React.js as a frontend library. I'm open to learning new technologies even not connected to web developement. Nevertheless, nowadays i strongy focus on creating websites and i'm eager to learn more and more to become the best software engineer i can be.</p>
         <br />
         <p>I graduated from the Warsaw University of Technology and now i'm pursuing a Masters degree in Computer Science at the same university.</p>
 
         <div className='flex'>
           <div>
-            <b>Current status: </b> Student
+            <b>Current status: </b> Student | Employed
           </div>
           <div>
-            <b>Role: </b> Full stack developer | Data engenieer
+            <b>Roles: </b> Backend developer | Full stack developer | Data engineer
           </div>
           <div>
-            <b>Degree: </b> Engenieer in Automation and Robotics
+            <b>Degree: </b> Engineer in Automation and Robotics
           </div>
  
           <div>

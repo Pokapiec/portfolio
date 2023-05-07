@@ -18,7 +18,7 @@ export default function Socials() {
           <img src={EmailIcon} alt="email" />
         </div>
         <div className='linkedin'>
-          <a href="https://www.linkedin.com/in/pawe%C5%82-okapiec/" target="_blank">
+          <a href="https://www.linkedin.com/in/pawelokapiec/" target="_blank">
             <img src={LinkedInIcon} alt="linkedin" />
           </a>
         </div>

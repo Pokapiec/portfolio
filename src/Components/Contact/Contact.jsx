@@ -54,7 +54,7 @@ export default function Contact() {
           <img src={LinkedinIcon} alt="" />
           <div className='contact-data'>
             <div className='contact-title'>Linkedin</div>
-            <a href='https://www.linkedin.com/in/pawe%C5%82-okapiec/'>linkedin.com/in/pawel-okapiec</a>
+            <a href='https://www.linkedin.com/in/pawelokapiec/'>linkedin.com/in/pawelokapiec</a>
           </div>
         </div>
 

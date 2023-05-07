@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 export default function Tech() {
     let abilities = {
         Python: 100,
-        Django: 80,
+        Django: 90,
         Flask: 60,
         FastAPI: 60,
         JavaScript: 80,
@@ -14,9 +14,11 @@ export default function Tech() {
         CSS: 70,
         React: 80,
         "Microsoft Azure": 70,
-        SQL: 80,
+        SQL: 90,
         Git: 90,
-        C: 50
+        C: 50,
+        Celery: 80,
+        RabbitMQ: 70,
     }
 
     let options = {

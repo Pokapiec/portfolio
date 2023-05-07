@@ -6,6 +6,7 @@ import RobotIcon from '../../icons/robot.svg';
 import ScrewdriverIcon from '../../icons/screwdriver.svg';
 import GaugeIcon from '../../icons/gauge-high.svg';
 import ComputerIcon from '../../icons/computer.svg';
+import IntegrationsIcon from '../../icons/integrations.svg';
 
 
 
@@ -15,6 +16,10 @@ export default function Services() {
         "REST API's": {
             desc: "Creating web API's using Python or Node.js frameworks",
             icon: ComputerIcon
+        },
+        "Integrations": {
+            desc: "Integrating systems like Twilio, Mailgun, Stripe and more",
+            icon: IntegrationsIcon
         },
         "Web scrapers": {
             desc: "Developing data gathering pipelines in Python",
