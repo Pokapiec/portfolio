@@ -22,7 +22,7 @@ export default function Header() {
           <h5 className='intro'>Hi! My name is</h5>
           <h1 className='name'>Paweł Okapiec</h1>
           <h5 className='role-intro'>And i'm a</h5>
-          <h4 className='role'>Backend developer | Fullstack developer | Data engineer</h4>
+          <h4 className='role'>Fullstack developer | Data engineer</h4>
         </div>
 
         <div className='blob'>
